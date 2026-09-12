@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Printer Guardian</title>
+
+    <link rel="stylesheet" href="guardian.css?v=2">
+
+</head>
+
+<body>
+  <div class="container">
+   <div class="panel">
+    <div class="panel-header">
+       <span class="panel-title">Printer Guardian</span>
+       <span class="collapse">▾</span>
+    </div>
+
+    <!-- Guardian Engine Status -->
+    <div id="guardian" class="box guardian-online">
+        <div class="value">
+            🟢 GUARDIAN ONLINE
+        </div>
+    </div>
+
+    <!-- Printer -->
+    <div class="box">
+        <div class="label">Printer</div>
+        <div id="printer" class="value">Klipper Printer</div>
+    </div>
+
+    <!-- Current Status -->
+    <div id="status" class="box status-box standby">
+        <div class="label">Status</div>
+        <div class="value">
+            🔵 STANDBY
+        </div>
+
+    </div>
+
+        <div class="box">
+            <div class="label">File</div>
+            <div id="filename" class="value">
+                No active print
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="box">
+
+                <div class="label">Progress</div>
+
+                <div id="progress" class="value">
+                    0%
+                </div>
+
+                <div class="progress-bar">
+
+                    <div class="progress-fill"></div>
+
+                </div>
+
+            </div>
+
+            <div class="box">
+
+                <div class="label">Layer</div>
+
+                <div id="layer" class="value">
+                    -- / --
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="xyz">
+
+            <div class="box">
+
+                <div class="label">X</div>
+
+                <div id="xpos" class="value">
+                    0.00
+                </div>
+
+            </div>
+
+            <div class="box">
+
+                <div class="label">Y</div>
+
+                <div id="ypos" class="value">
+                    0.00
+                </div>
+
+            </div>
+
+            <div class="box">
+
+                <div class="label">Z</div>
+
+                <div id="zpos" class="value">
+                    0.00
+                </div>
+
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="row">
+
+            <div class="box">
+
+                <div class="label">Nozzle</div>
+
+                <div id="nozzle" class="value">
+                    0.0°/ 0.0°
+                </div>
+
+            </div>
+
+            <div class="box">
+
+                <div class="label">Bed</div>
+
+                <div id="bed" class="value">
+                    0.0° / 0.0°
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<div class="row guardian-recovery-row">
+    <div class="box">
+        <div class="label">Guardian Recovery</div>
+
+        <div id="recoveryStatus">
+            No saved recovery
+        </div>
+
+        <div id="recoveryButtons">
+            <button id="prepareRecoveryButton">
+                Prepare Recovery
+            </button>
+
+            <button id="discardRecoveryButton">
+                Discard Recovery
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row guardian-report-row">
+    <div class="box guardian-report-box">
+
+        <div class="guardian-report-header">
+            <span>Guardian Report</span>
+
+            <button id="guardianReportToggle"
+                    class="guardian-report-toggle">
+                ▸
+            </button>
+        </div>
+
+        <div id="guardianReportContent"
+            class="guardian-report-content">
+
+            <div id="reportButtons">
+
+                <button id="generateReportButton">
+                    Generate Report
+                </button>
+
+                <button id="printReportButton">
+                    Print Report
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+<script src="analyzer.js?v=2"></script>
+<script src="recovery_builder.js"></script>
+<script src="guardian.js?v=3"></script>
+
+</body>
+
+</html>
